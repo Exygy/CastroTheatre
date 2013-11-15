@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-	before_filter :set_movie, only: :show
+	before_filter :set_movie, only: [:show, :edit, :update, :destroy]
 
 	def index
 		@movies = Movie.all
@@ -20,6 +20,22 @@ class MoviesController < ApplicationController
 			render action: 'new'        
 		end
 	end
+
+	def edit
+	end
+
+	def update
+		if @movie.update(movie_params)
+			redirect_to @movie, notice: 'Movie was successfully updated.'
+		else
+			render action: 'edit'
+		end
+	end	
+
+	def destroy
+		@movie.destroy
+		redirect_to movies_url
+	end	
 
 	private
 		# Use callbacks to share common setup or constraints between actions.
