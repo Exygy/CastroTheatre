@@ -10,7 +10,7 @@ class MovieTest < ActiveSupport::TestCase
   	assert m.title == "Superman"
   end
 
-  test "movie title should be uniq" do
+  test "movie title should be unique" do
   	# create new movie with movie title already presnet in the db
   	m = Movie.create(title: "Superman")
   	# movie should save == should not have an id
