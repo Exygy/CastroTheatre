@@ -14,7 +14,7 @@ CastroTheatre::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  resources :movies, only:[:index, :show, :new, :create, :edit, :update]
+  resources :movies
 
   # Example resource route with options:
   #   resources :products do
