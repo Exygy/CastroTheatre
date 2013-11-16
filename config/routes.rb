@@ -1,4 +1,6 @@
 CastroTheatre::Application.routes.draw do
+  resources :floors
+
   resources :rooms
 
   # The priority is based upon order of creation: first created -> highest priority.
