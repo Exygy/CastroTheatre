@@ -17,4 +17,16 @@ class MovieTest < ActiveSupport::TestCase
   	assert m.id == nil
   end  
 
+  test "movie should have many rooms" do
+    m = movies(:superman)
+
+    r1 = rooms(:room1)
+    r2 = rooms(:room2)
+    
+    m.rooms << r1
+    m.rooms << r2
+
+    assert m.rooms.collect{|r| r.id }.sort == [r1.id, r2.id].sort
+  end
+
 end

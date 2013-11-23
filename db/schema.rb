@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131116012014) do
+ActiveRecord::Schema.define(version: 20131123065957) do
 
   create_table "floors", force: true do |t|
     t.string   "level"
@@ -27,10 +27,18 @@ ActiveRecord::Schema.define(version: 20131116012014) do
     t.datetime "updated_at"
   end
 
+  create_table "movies_rooms", force: true do |t|
+    t.integer "room_id"
+    t.integer "movie_id"
+  end
+
   create_table "rooms", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "floor_id"
   end
+
+  add_index "rooms", ["floor_id"], name: "index_rooms_on_floor_id"
 
 end
