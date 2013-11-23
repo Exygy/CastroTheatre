@@ -2,7 +2,7 @@
 <ul>
 	<% @movies.each do |movie| %>
 		<li>
-			<%= movie.title %>
+			<%= link_to movie.title, movie_path(movie) %>
 			--
 			<%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %>
 		</li>

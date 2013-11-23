@@ -3,3 +3,10 @@
 <p><%= @movie.description %></p>
 <h3>Duration:</h3>
 <p><%= @movie.duration %></p>
+
+<h5>Rooms</h5>
+<ul>
+	<% @movie.rooms.each do |room| %>
+		<li><%= link_to room.name, room_path(room) %></li>
+	<% end %>
+</ul>
