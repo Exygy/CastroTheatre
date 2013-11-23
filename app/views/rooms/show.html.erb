@@ -5,5 +5,12 @@
   <%= @room.name %>
 </p>
 
+<p>
+  <% if @room.floor %>
+    <strong>Floor:</strong>
+    <%= @room.floor.name %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_room_path(@room) %> |
 <%= link_to 'Back', rooms_path %>

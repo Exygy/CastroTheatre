@@ -5,5 +5,12 @@
   <%= @floor.level %>
 </p>
 
+<h5>Rooms</h5>
+<ul>
+	<% @floor.rooms.each do |room| %>
+		<li><%= link_to room.name, room_path(room) %></li>
+	<% end %>
+</ul>
+
 <%= link_to 'Edit', edit_floor_path(@floor) %> |
 <%= link_to 'Back', floors_path %>
