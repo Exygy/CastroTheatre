@@ -1,4 +1,6 @@
 CastroTheatre::Application.routes.draw do
+
+
   resources :floors
 
   resources :rooms
