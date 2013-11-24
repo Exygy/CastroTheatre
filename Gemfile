@@ -30,13 +30,12 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'simple_form'
 gem 'twitter-bootstrap-rails'
+gem 'quiet_assets', :group => :development
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
-
-
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
