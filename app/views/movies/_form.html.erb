@@ -1,9 +1,11 @@
+<p>We already have a movie called Inception, please stop adding it.</p>
+
 <%= simple_form_for @movie do |f| %>
   <%= f.input :title %>
   <%= f.input :description %>
   <%= f.input :duration %>
 
-  <%= f.association :rooms %>
+  <%= f.association :rooms, collection: @selection_rooms %>
 
 
   <p><%= f.submit %></p>

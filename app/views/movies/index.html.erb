@@ -1,10 +1,8 @@
 <h1>Movies</h1>
 <ul>
-	<% @movies.each do |movie| %>
-		<li>
-			<%= link_to movie.title, movie_path(movie) %>
-			--
-			<%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %>
-		</li>
-	<% end %>
+  <% @movies.each do |movie| %>
+    <li>
+      <%= render partial: 'movie', locals: {movie: movie} %>
+    </li>
+  <% end %>
 </ul>

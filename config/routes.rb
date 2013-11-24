@@ -1,9 +1,13 @@
 CastroTheatre::Application.routes.draw do
 
-
   resources :floors
 
   resources :rooms
+
+  root 'movies#index'
+  resources :movies
+  
+  # get 'movies' => 'movies#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -20,10 +24,8 @@ CastroTheatre::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  resources :movies
-
   # Example resource route with options:
-  #   resources :products do
+    # resources :products
   #     member do
   #       get 'short'
   #       post 'toggle'
@@ -47,7 +49,7 @@ CastroTheatre::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

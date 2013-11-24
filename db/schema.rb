@@ -11,12 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131123065957) do
+ActiveRecord::Schema.define(version: 20131124003443) do
 
   create_table "floors", force: true do |t|
-    t.string   "level"
+    t.integer  "level"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "movie_rooms", force: true do |t|
+    t.integer  "room_id"
+    t.integer  "movie_id"
+    t.datetime "start_time"
   end
 
   create_table "movies", force: true do |t|
@@ -25,15 +31,12 @@ ActiveRecord::Schema.define(version: 20131123065957) do
     t.integer  "duration"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "movies_rooms", force: true do |t|
-    t.integer "room_id"
-    t.integer "movie_id"
+    t.float    "price"
   end
 
   create_table "rooms", force: true do |t|
     t.string   "name"
+    t.integer  "number"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "floor_id"

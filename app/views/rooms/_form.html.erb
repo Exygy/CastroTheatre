@@ -1,4 +1,4 @@
-<%= simple_form_for(@room) do |f| %>
+<%= form_for(@room) do |f| %>
   <% if @room.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@room.errors.count, "error") %> prohibited this room from being saved:</h2>
@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.input :name %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </div>
-
-  <div class="association">
-    <%= f.association :floor, label_method: :level %>
+  <div class="field">
+    <%= f.label :number %><br>
+    <%= f.number_field :number %>
   </div>
-
   <div class="actions">
     <%= f.submit %>
   </div>

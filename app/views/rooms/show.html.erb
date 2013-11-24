@@ -6,11 +6,17 @@
 </p>
 
 <p>
-  <% if @room.floor %>
-    <strong>Floor:</strong>
-    <%= @room.floor.level %>
-  <% end %>
+  <strong>Number:</strong>
+  <%= @room.number %>
 </p>
+
+
+<% if @room.floor %>
+  <h5>Floor</h5>
+  <p><%= @room.floor.level %></p>
+<% end %> 
+
+
 
 <%= link_to 'Edit', edit_room_path(@room) %> |
 <%= link_to 'Back', rooms_path %>

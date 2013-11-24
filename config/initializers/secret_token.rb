@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-CastroTheatre::Application.config.secret_key_base = '105fdd3e25b3e83bfac1ed6edffe3781dadde3f4422ac94bc30d95b017e4be7bffd2383d35eb524e1636a6d62995883cc266373259723e51152ffdcff07d4d38'
+CastroTheatre::Application.config.secret_key_base = '7a26258f7d872156c49b8f4d2677150f06caa5ad756626dbe976c7dc3abb0c1e9f98422e3947d4791a9528ad13bfff0d5860e4b2a45f46dc9f72c5fbd041e99b'

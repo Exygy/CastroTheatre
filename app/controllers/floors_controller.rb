@@ -69,6 +69,6 @@ class FloorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def floor_params
-      params.require(:floor).permit(:level)
+      params.require(:floor).permit(:level, room_ids: [])
     end
 end
